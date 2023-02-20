@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <style>
+        form {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confirm_password").value;
+            if (name == "") {
+                alert("name must be fill out");
+                return false
+            }
+            if (email == "") {
+                alert("email must be filled out");
+                return false;
+            }
+            if (password == "") {
+                alert("password must be filled");
+                return false;
+            }
+            if (confirm_password == "") {
+                alert("conform password must be filled out");
+                return false;
+            }
+            if (password != confirm_password) {
+                alert("password do not match");
+                return false;
+            }
+            alert("form submitted successfully");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h2 style="text-align:center;">Registration Form</h2>
+    <form onsubmit="return validateForm()"  name="registrationFrom">
+        <label>name:</label>
+        <input type="text" id="name" name="name" ><br><br>
+        <label>email:</label>
+        <input type="text" id="email" name="email" ><br><br>
+        <label>password:</label>
+        <input type="password" id="password" name="password" ><br><br>
+        <label>confrim password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" ><br><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>

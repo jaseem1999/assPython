@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handler</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #text{
+            color: red;
+        }
+        #btn{
+            padding: 10px 20px;
+            background-color: aqua;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="container">
+        <h1>Event Handler</h1>
+        <p>Click on the button to change the color of the text</p>
+        <button id="btn">Click Me</button>
+        <p id="text">This is a paragraph</p>
+    </div>
+    <script>
+        let btn = document.getElementById("btn");
+        let text = document.getElementById("text");
+        document.getElementById("btn").addEventListener("click", clicked);
+        function clicked(){
+            var color = 10000000;
+            color = "#"+Math.floor(Math.random()*color).toString(16);
+            document.getElementById("body").style.background = color;
+        }
+    </script>
+
+</body>
+</html>

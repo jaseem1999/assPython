@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <form onsubmit="return validate()">
+        <h1>Registration Form</h1>
+        <span id="error_message"></span><br>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required><br><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+<script src="scriot.js">
+   
+</script>
+</body>
+</html>
